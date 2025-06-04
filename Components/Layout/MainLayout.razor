@@ -9,20 +9,23 @@
     <MudAppBar>
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
         SICUENSA 
-        <MudImage Src="/favicon.png" Alt="Minsa-logo" Elevation="25" Class="rounded-lg" Width="40"/>
+        <MudImage Src="/favicon.png" Alt="Minsa-logo" Class="rounded-lg" Width="40"/>
+        <MudSpacer />
+        <MudText Typo="Typo.h6" Class="d-none d-sm-block">Sistema de Control de Unidades de Salud</MudText>
+        <MudIconButton Icon="@Icons.Material.Filled.Search" Color="Color.Inherit" Edge="Edge.End" />
     </MudAppBar>
     <MudDrawer @bind-Open="@_drawerOpen">
         <MyNavMenu/>
     </MudDrawer>
     <MudMainContent>
-        <MudContainer MaxWidth="MaxWidth.Large">
+        <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge">
             @Body
         </MudContainer>
     </MudMainContent>
 </MudLayout>
 
 @code {
-    bool _drawerOpen = true;
+    bool _drawerOpen = false;
 
     void DrawerToggle()
     {

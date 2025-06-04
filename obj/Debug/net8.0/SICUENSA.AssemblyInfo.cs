@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SICUENSA")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac42847606b9aedbb64f198f10daf69f150aa19f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25e2c082520177c232f43efa746bb645a4ccdeed")]
 [assembly: System.Reflection.AssemblyProductAttribute("SICUENSA")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SICUENSA")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

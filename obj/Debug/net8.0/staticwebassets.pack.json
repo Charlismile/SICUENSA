@@ -5,6 +5,50 @@
       "PackagePath": "staticwebassets\\SICUENSA.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\Banner.jpg",
+      "PackagePath": "staticwebassets\\Banner.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\Banner2.jpg",
+      "PackagePath": "staticwebassets\\Banner2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\Banner3.jpg",
+      "PackagePath": "staticwebassets\\Banner3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\Corazon.jpg",
+      "PackagePath": "staticwebassets\\Corazon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\ERP.jpg",
+      "PackagePath": "staticwebassets\\ERP.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\Exercise.jpg",
+      "PackagePath": "staticwebassets\\Exercise.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\FEED.jpg",
+      "PackagePath": "staticwebassets\\FEED.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\Meditation.jpg",
+      "PackagePath": "staticwebassets\\Meditation.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\SHA.png",
+      "PackagePath": "staticwebassets\\SHA.png"
+    },
+    {
+      "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\Yoga-mujeres.jpg",
+      "PackagePath": "staticwebassets\\Yoga-mujeres.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\Yoga.jpg",
+      "PackagePath": "staticwebassets\\Yoga.jpg"
+    },
+    {
       "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
@@ -17,8 +61,16 @@
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
+      "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\estudio.png",
+      "PackagePath": "staticwebassets\\estudio.png"
+    },
+    {
       "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\ghed.png",
+      "PackagePath": "staticwebassets\\ghed.png"
     },
     {
       "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\logo-gob.png",
