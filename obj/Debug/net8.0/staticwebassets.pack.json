@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SICUENSA.bundle.scp.css",
+      "PackagePath": "staticwebassets\\SICUENSA.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SICUENSA.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.SICUENSA.props",
+      "PackagePath": "build\\SICUENSA.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.SICUENSA.props",
+      "PackagePath": "buildMultiTargeting\\SICUENSA.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.SICUENSA.props",
+      "PackagePath": "buildTransitive\\SICUENSA.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
