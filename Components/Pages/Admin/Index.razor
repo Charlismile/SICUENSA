@@ -1,0 +1,152 @@
+﻿@* @page "/Index" *@
+@* @using SICUENSA.Repositories.Services *@
+@* @inject DashboardService DashboardService *@
+@* *@
+@* <h3 class="mt-4">Dashboard - Instalaciones</h3> *@
+@* *@
+@* <div class="row"> *@
+@*     <div class="col-md-6"> *@
+@*         <Chart @ref="chart" ChartType="ChartType.Doughnut" Width="600" /> *@
+@*     </div> *@
+@* </div> *@
+@* *@
+@* <div class="mt-5"> *@
+@*     <button class="btn btn-primary btn-sm" @onclick="RandomizeAsync"> Randomize </button> *@
+@*     <button class="btn btn-primary btn-sm" @onclick="AddDatasetAsync"> Add Dataset </button> *@
+@*     <button class="btn btn-primary btn-sm" @onclick="AddDataAsync">Add Data</button> *@
+@*     <button class="btn btn-primary mt-4" @onclick="LoadData">Actualizar Datos</button> *@
+@* </div> *@
+@* *@
+@* @code { *@
+@*     private Chart chart; *@
+@*     private ChartData chartData; *@
+@*     private string[] chartColors = new[] *@
+@*     { *@
+@*         "rgba(255, 99, 132, 0.5)", *@
+@*         "rgba(54, 162, 235, 0.5)", *@
+@*         "rgba(255, 206, 86, 0.5)", *@
+@*         "rgba(75, 192, 192, 0.5)", *@
+@*         "rgba(153, 102, 255, 0.5)" *@
+@*     }; *@
+@* *@
+@*     private int datasetsCount = 0; *@
+@*     private int dataLabelsCount = 0; *@
+@* *@
+@*     private Random random = new(); *@
+@* *@
+@*     protected override void OnInitialized() *@
+@*     { *@
+@*         dataLabelsCount = 5; *@
+@*         chartData = new ChartData *@
+@*         { *@
+@*             Labels = GetDefaultDataLabels(5), *@
+@*             Datasets = [GetRandomChartDataset()] *@
+@*         }; *@
+@*     } *@
+@* *@
+@*     protected override async Task OnAfterRenderAsync(bool firstRender) *@
+@*     { *@
+@*         if (firstRender) *@
+@*         { *@
+@*             await LoadData(); *@
+@*         } *@
+@*         await base.OnAfterRenderAsync(firstRender); *@
+@*     } *@
+@* *@
+@*     private async Task RandomizeAsync() *@
+@*     { *@
+@*         if (chartData?.Datasets == null || chartData.Datasets.Count == 0) return; *@
+@* *@
+@*         var dataset = (ChartDataset<double?>)chartData.Datasets[0]; *@
+@* *@
+@*         var newData = new List<double?>(); *@
+@*         foreach (var _ in dataset.Data) *@
+@*         { *@
+@*             newData.Add(random.Next(0, 100)); *@
+@*         } *@
+@* *@
+@*         dataset.Data = newData; *@
+@*         dataset.BackgroundColor = chartColors.Take(newData.Count).ToList(); *@
+@* *@
+@*         await chart.UpdateAsync(chartData); *@
+@*     } *@
+@* *@
+@*     private async Task AddDatasetAsync() *@
+@*     { *@
+@*         var newDataset = GetRandomChartDataset(); *@
+@*         chartData.Datasets.Add(newDataset); *@
+@*         await chart.UpdateAsync(chartData); *@
+@*     } *@
+@* *@
+@*     private async Task AddDataAsync() *@
+@*     { *@
+@*         if (dataLabelsCount >= 12) return; *@
+@* *@
+@*         dataLabelsCount += 1; *@
+@* *@
+@*         foreach (var dataset in chartData.Datasets) *@
+@*         { *@
+@*             if (dataset is ChartDataset<double?> typedDataset) *@
+@*             { *@
+@*                 typedDataset.Data.Add(random.Next(0, 100)); *@
+@*                 typedDataset.BackgroundColor = chartColors.Take(dataLabelsCount).ToList(); *@
+@*             } *@
+@*         } *@
+@* *@
+@*         chartData.Labels.Add($"Product {dataLabelsCount}"); *@
+@*         await chart.UpdateAsync(chartData); *@
+@*     } *@
+@* *@
+@*     private async Task LoadData() *@
+@*     { *@
+@*         var dataByLevel = await DashboardService.GetCountByLevelAsync(); *@
+@* *@
+@*         var dataset = new ChartDataset<double?> *@
+@*         { *@
+@*             Label = "Instalaciones por nivel", *@
+@*             Data = dataByLevel.Values.Select(v => (double?)v).ToList(), *@
+@*             BackgroundColor = chartColors.Take(dataByLevel.Count).ToList() *@
+@*         }; *@
+@* *@
+@*         chartData = new ChartData *@
+@*         { *@
+@*             Labels = dataByLevel.Keys.ToList(), *@
+@*             Datasets = [dataset] *@
+@*         }; *@
+@* *@
+@*         await chart.UpdateAsync(chartData); *@
+@*     } *@
+@* *@
+@*     #region Helpers *@
+@* *@
+@*     private List<string> GetDefaultDataLabels(int numberOfLabels) *@
+@*     { *@
+@*         var labels = new List<string>(); *@
+@*         for (int i = 0; i < numberOfLabels; i++) *@
+@*         { *@
+@*             labels.Add($"Product {i + 1}"); *@
+@*         } *@
+@*         return labels; *@
+@*     } *@
+@* *@
+@*     private ChartDataset<double?> GetRandomChartDataset() *@
+@*     { *@
+@*         datasetsCount++; *@
+@*         return new ChartDataset<double?> *@
+@*         { *@
+@*             Label = $"Team {datasetsCount}", *@
+@*             Data = GetRandomData().ToList(), *@
+@*             BackgroundColor = chartColors.Take(dataLabelsCount).ToList() *@
+@*         }; *@
+@*     } *@
+@* *@
+@*     private IEnumerable<double?> GetRandomData() *@
+@*     { *@
+@*         for (int i = 0; i < dataLabelsCount; i++) *@
+@*         { *@
+@*             yield return random.Next(0, 100); *@
+@*         } *@
+@*     } *@
+@* *@
+@*     #endregion *@
+@* } *@

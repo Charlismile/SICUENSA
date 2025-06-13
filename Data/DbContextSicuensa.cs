@@ -27,9 +27,9 @@ public partial class DbContextSicuensa : DbContext
 
     public virtual DbSet<AspNetUserToken> AspNetUserTokens { get; set; }
 
-    public virtual DbSet<Clasificacion> Clasificacions { get; set; }
+    public virtual DbSet<Clasificacion> Clasificaciones { get; set; }
 
-    public virtual DbSet<Instalacion> Instalacions { get; set; }
+    public virtual DbSet<Instalacion> Instalaciones { get; set; }
 
     public virtual DbSet<Sha1> Sha1s { get; set; }
 
@@ -197,10 +197,6 @@ public partial class DbContextSicuensa : DbContext
                 .ToTable("SHA2");
 
             entity.Property(e => e.Codigo).HasMaxLength(255);
-            entity.Property(e => e.F4).HasMaxLength(255);
-            entity.Property(e => e.F5).HasMaxLength(255);
-            entity.Property(e => e.F6).HasMaxLength(255);
-            entity.Property(e => e.F7).HasMaxLength(255);
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Sha1Id).HasColumnName("sha1_id");
         });

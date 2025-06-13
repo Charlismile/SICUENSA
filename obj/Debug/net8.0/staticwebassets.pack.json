@@ -9,6 +9,22 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
+      "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\images\\salud1.jpg",
+      "PackagePath": "staticwebassets\\images\\salud1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\images\\salud2.jpg",
+      "PackagePath": "staticwebassets\\images\\salud2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\images\\salud3.jpg",
+      "PackagePath": "staticwebassets\\images\\salud3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cabernalo\\RiderProjects\\SICUENSA\\SICUENSA\\wwwroot\\notes.gitignore",
+      "PackagePath": "staticwebassets\\notes.gitignore"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SICUENSA.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

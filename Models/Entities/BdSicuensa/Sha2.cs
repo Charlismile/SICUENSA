@@ -10,12 +10,5 @@ public partial class Sha2
     public string? Codigo { get; set; }
 
     public double? Sha1Id { get; set; }
-
-    public string? F4 { get; set; }
-
-    public string? F5 { get; set; }
-
-    public string? F6 { get; set; }
-
-    public string? F7 { get; set; }
+    
 }

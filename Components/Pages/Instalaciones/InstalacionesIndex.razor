@@ -1,0 +1,30 @@
+﻿@page "/InstalacionesIndex"
+@using Microsoft.EntityFrameworkCore
+@using SICUENSA.Models.Entities.BdSicuensa
+@inject DbContextSicuensa Db
+
+<Table TableType="TableType.Striped">
+    <thead>
+    <tr><th>ID</th><th>Nombre</th><th>Nivel</th><th>Tipo</th></tr>
+    </thead>
+    <tbody>
+    @foreach (var item in instalaciones)
+    {
+        <tr>
+            <td>@item.InstalacionSaludId</td>
+            <td>@item.InstalacionSalud</td>
+            <td>@item.NivelInstalacion</td>
+            <td>@item.TipoInstalacion</td>
+        </tr>
+    }
+    </tbody>
+</Table>
+
+@code {
+    private List<Instalacion> instalaciones = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        instalaciones = await Db.Instalaciones.ToListAsync();
+    }
+}
